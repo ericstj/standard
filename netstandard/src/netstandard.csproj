@@ -14,7 +14,7 @@
     <BaselineAllAPICompatError>true</BaselineAllAPICompatError>
     <ApiCompatBaseline>$(MSBuildProjectDirectory)\ApiCompatBaseline.$(TargetGroup).txt</ApiCompatBaseline>
   </PropertyGroup>
-  <ItemGroup>
+  <ItemGroup Condition="'$(TargetGroup)' == 'net461' or '$(TargetGroup)' == 'xamarin.ios'">
     <ProjectReference Include="..\..\platforms\$(TargetGroup)\mscorlib.csproj" />
     <ProjectReference Include="..\..\platforms\$(TargetGroup)\System.csproj" />
     <ProjectReference Include="..\..\platforms\$(TargetGroup)\System.ComponentModel.Composition.csproj" />
@@ -36,6 +36,10 @@
     <ProjectReference Include="..\..\platforms\$(TargetGroup)\OpenTK-1.0.csproj" />
     <ProjectReference Include="..\..\platforms\$(TargetGroup)\System.Web.Services.csproj" />
     <ProjectReference Include="..\..\platforms\$(TargetGroup)\Xamarin.iOS.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetGroup)' == 'netcoreapp1.1'">
+    <!-- TODO: Need to restore netcoreapp1.1 platform from packages -->
+    <ReferencePath Include="$(NETCoreAppPath)\*.dll" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

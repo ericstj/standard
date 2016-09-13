@@ -8,6 +8,12 @@
     <Project Include="netstandard.csproj">
       <TargetGroup>net461</TargetGroup>
     </Project>
+
+    <!-- TODO: Need to restore netcoreapp1.1 platform from packages -->
+    <Project Include="netstandard.csproj" Condition="Exists('\\cpvsbuild\drops\DotNetCore\DotNet-CoreFx-devapi-Windows-Compat\20160831-01\ApiCatalog\ref\netcoreapp1.1')">
+      <TargetGroup>netcoreapp1.1</TargetGroup>
+      <AdditionalProperties>%(Project.AdditionalProperties);NETCoreAppPath=\\cpvsbuild\drops\DotNetCore\DotNet-CoreFx-devapi-Windows-Compat\20160831-01\ApiCatalog\ref\netcoreapp1.1</AdditionalProperties>
+    </Project>
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.traversal.targets))\dir.traversal.targets" />
 </Project>
