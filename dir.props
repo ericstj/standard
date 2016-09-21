@@ -187,4 +187,6 @@
     <SymbolPackageOutputPath Condition="'$(SymbolPackageOutputPath)'==''">$(PackageOutputPath)symbols/</SymbolPackageOutputPath>
   </PropertyGroup>
 
+  <Import Project="platforms\platforms.props" />
+
 </Project>

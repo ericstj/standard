@@ -37,9 +37,92 @@
     <ProjectReference Include="..\..\platforms\$(TargetGroup)\System.Web.Services.csproj" />
     <ProjectReference Include="..\..\platforms\$(TargetGroup)\Xamarin.iOS.csproj" />
   </ItemGroup>
+  <ItemGroup Condition="'$(TargetGroup)' == 'netcoreapp1.1.ref'">
+    <ReferencePath Include="$(NETCoreAppPath)ref\netcoreapp1.1\*.dll" Exclude="@(ExcludePath)" />
+  </ItemGroup>
   <ItemGroup Condition="'$(TargetGroup)' == 'netcoreapp1.1'">
+    <ExcludePath Include="$(NETCoreAppPath)runtime\netcoreapp1.1.win7-x64\System.Security.Permissions.dll " />
     <!-- TODO: Need to restore netcoreapp1.1 platform from packages -->
-    <ReferencePath Include="$(NETCoreAppPath)\*.dll" />
+    <ReferencePath Include="$(NETCoreAppPath)runtime\netcoreapp1.1.win7-x64\*.dll" Exclude="@(ExcludePath)" />
+
+    <SeedTypePreference Include="System.BitConverter">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Collections.CollectionBase">
+      <Assembly>System.Collections.NonGeneric</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Collections.ObjectModel.KeyedCollection`2">
+      <Assembly>System.ObjectModel</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Collections.ObjectModel.ReadOnlyDictionary`2">
+      <Assembly>System.ObjectModel</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Collections.ObjectModel.ReadOnlyDictionary`2.KeyCollection">
+      <Assembly>System.ObjectModel</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Collections.ObjectModel.ReadOnlyDictionary`2.ValueCollection">
+      <Assembly>System.ObjectModel</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Collections.StructuralComparisons">
+      <Assembly>System.Collections</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Console">
+      <Assembly>System.Console</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.DBNull">
+      <Assembly>System.Data.Common</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Environment">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Globalization.IdnMapping">
+      <Assembly>System.Globalization.Extensions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.IO.FileAccess">
+      <Assembly>System.IO.FileSystem.Primitives</Assembly>
+    </SeedTypePreference>
+        <SeedTypePreference Include="System.IO.Path">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.IO.UnmanagedMemoryAccessor">
+      <Assembly>System.IO.UnmanagedMemoryStream</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.IO.UnmanagedMemoryStream">
+      <Assembly>System.IO.UnmanagedMemoryStream</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.IServiceProvider">
+      <Assembly>System.ComponentModel</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.OperatingSystem">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.PlatformID">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.ReadOnlyCollectionBuilder`1">
+      <Assembly>System.Linq.Expressions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.RuntimeOps">
+      <Assembly>System.Linq.Expressions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.Serialization.FormatterServices">
+      <Assembly>System.Runtime.Serialization.Formatters</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Security.Principal.IIdentity">
+      <Assembly>System.Security.Principal</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Security.Principal.IPrincipal">
+      <Assembly>System.Security.Principal</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Security.Principal.TokenImpersonationLevel">
+      <Assembly>System.Security.Principal</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Threading.CountdownEvent">
+      <Assembly>System.Threading</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Threading.WaitHandleExtensions">
+      <Assembly>System.Runtime.Handles</Assembly>
+    </SeedTypePreference>
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>
