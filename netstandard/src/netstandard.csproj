@@ -39,12 +39,19 @@
   </ItemGroup>
   <ItemGroup Condition="'$(TargetGroup)' == 'netcoreapp1.1.ref'">
     <ReferencePath Include="$(NETCoreAppPath)ref\netcoreapp1.1\*.dll" Exclude="@(ExcludePath)" />
+
+    <SeedTypePreference Include="System.Runtime.CompilerServices.IsConst">
+      <Assembly>System.Runtime</Assembly>
+    </SeedTypePreference>
   </ItemGroup>
   <ItemGroup Condition="'$(TargetGroup)' == 'netcoreapp1.1'">
     <ExcludePath Include="$(NETCoreAppPath)runtime\netcoreapp1.1.win7-x64\System.Security.Permissions.dll " />
     <!-- TODO: Need to restore netcoreapp1.1 platform from packages -->
     <ReferencePath Include="$(NETCoreAppPath)runtime\netcoreapp1.1.win7-x64\*.dll" Exclude="@(ExcludePath)" />
 
+    <SeedTypePreference Include="System.AppDomain">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
     <SeedTypePreference Include="System.BitConverter">
       <Assembly>System.Runtime.Extensions</Assembly>
     </SeedTypePreference>
@@ -99,6 +106,9 @@
     <SeedTypePreference Include="System.PlatformID">
       <Assembly>System.Runtime.Extensions</Assembly>
     </SeedTypePreference>
+    <SeedTypePreference Include="System.Reflection.RuntimeReflectionExtensions">
+      <Assembly>System.Runtime</Assembly>
+    </SeedTypePreference>
     <SeedTypePreference Include="System.Runtime.CompilerServices.ReadOnlyCollectionBuilder`1">
       <Assembly>System.Linq.Expressions</Assembly>
     </SeedTypePreference>
@@ -122,6 +132,58 @@
     </SeedTypePreference>
     <SeedTypePreference Include="System.Threading.WaitHandleExtensions">
       <Assembly>System.Runtime.Handles</Assembly>
+    </SeedTypePreference>
+
+    <SeedTypePreference Include="System.Runtime.CompilerServices.CallConvCdecl">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.CallConvFastcall">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.CallConvStdcall">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.CallConvThiscall">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.IsBoxed">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.IsByValue">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.IsConst">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.IsCopyConstructed">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.IsExplicitlyDereferenced">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.IsImplicitlyDereferenced">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.IsJitIntrinsic">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.IsLong">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.IsSignUnspecifiedByte">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.IsUdtReturn">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.IsVolatile">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.NativeCppClassAttribute">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.RequiredAttributeAttribute">
+      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
     </SeedTypePreference>
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
