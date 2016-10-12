@@ -52,6 +52,27 @@
     <SeedTypePreference Include="System.AppDomain">
       <Assembly>System.Runtime.Extensions</Assembly>
     </SeedTypePreference>
+    <SeedTypePreference Include="System.AppDomainUnloadedException">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.CannotUnloadAppDomainException">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.Versioning.ComponentGuaranteesAttribute">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.Versioning.ComponentGuaranteesOptions">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.Versioning.ResourceExposureAttribute">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.Versioning.ResourceScope">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.Versioning.VersioningHelper">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
     <SeedTypePreference Include="System.BitConverter">
       <Assembly>System.Runtime.Extensions</Assembly>
     </SeedTypePreference>
@@ -88,7 +109,7 @@
     <SeedTypePreference Include="System.IO.FileAccess">
       <Assembly>System.IO.FileSystem.Primitives</Assembly>
     </SeedTypePreference>
-        <SeedTypePreference Include="System.IO.Path">
+    <SeedTypePreference Include="System.IO.Path">
       <Assembly>System.Runtime.Extensions</Assembly>
     </SeedTypePreference>
     <SeedTypePreference Include="System.IO.UnmanagedMemoryAccessor">
@@ -96,6 +117,33 @@
     </SeedTypePreference>
     <SeedTypePreference Include="System.IO.UnmanagedMemoryStream">
       <Assembly>System.IO.UnmanagedMemoryStream</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.IO.StreamReader">
+      <Assembly>System.IO</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.IO.StreamWriter">
+      <Assembly>System.IO</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.IO.StringReader">
+      <Assembly>System.IO</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.IO.StringWriter">
+      <Assembly>System.IO</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.IO.TextReader">
+      <Assembly>System.IO</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.IO.TextWriter">
+      <Assembly>System.IO</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Resources.IResourceReader">
+      <Assembly>System.ComponentModel.TypeConverter</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Resources.ResourceReader">
+      <Assembly>System.Resources.Reader</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Resources.ResourceSet">
+      <Assembly>System.ComponentModel.TypeConverter</Assembly>
     </SeedTypePreference>
     <SeedTypePreference Include="System.IServiceProvider">
       <Assembly>System.ComponentModel</Assembly>
