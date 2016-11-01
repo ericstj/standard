@@ -230,8 +230,57 @@
     <SeedTypePreference Include="System.Runtime.CompilerServices.NativeCppClassAttribute">
       <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
     </SeedTypePreference>
-    <SeedTypePreference Include="System.Runtime.CompilerServices.RequiredAttributeAttribute">
-      <Assembly>System.Runtime.CompilerServices.VisualC</Assembly>
+    
+    <SeedTypePreference Include="System.ApplicationId">
+      <Assembly>System.Runtime.Extensions</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Collections.BitArray">
+      <Assembly>System.Collections</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.LocalDataStoreSlot">
+      <Assembly>System.Threading.Thread</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Net.HttpVersion">
+      <Assembly>System.Net.Primitives</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.CompilerServices.SpecialNameAttribute">
+      <Assembly>System.Runtime</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.InteropServices.ComAliasNameAttribute">
+      <Assembly>System.Runtime.InteropServices</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.InteropServices.ComCompatibleVersionAttribute">
+      <Assembly>System.Runtime.InteropServices</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.InteropServices.ComConversionLossAttribute">
+      <Assembly>System.Runtime.InteropServices</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.InteropServices.ComRegisterFunctionAttribute">
+      <Assembly>System.Runtime.InteropServices</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.InteropServices.ComUnregisterFunctionAttribute">
+      <Assembly>System.Runtime.InteropServices</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.InteropServices.ICustomFactory">
+      <Assembly>System.Runtime.InteropServices</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.InteropServices.ICustomMarshaler">
+      <Assembly>System.Runtime.InteropServices</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute">
+      <Assembly>System.Runtime.InteropServices</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.InteropServices.ProgIdAttribute">
+      <Assembly>System.Runtime.InteropServices</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Runtime.InteropServices.LCIDConversionAttribute">
+      <Assembly>System.Runtime.InteropServices</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Threading.Thread">
+      <Assembly>System.Threading.Thread</Assembly>
+    </SeedTypePreference>
+    <SeedTypePreference Include="System.Threading.ThreadAbortException">
+      <Assembly>System.Threading.Thread</Assembly>
     </SeedTypePreference>
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
